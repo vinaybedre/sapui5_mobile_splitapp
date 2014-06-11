@@ -1,4 +1,4 @@
-sapui5_mobile_splitapp
+SAPUI5 Split app example
 ======================
 
 Split App Hello World example
