@@ -1,0 +1,12 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" controllerName="masterdetailssapui5.MasterView"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page id="MasterViewPage" showHeader="false">
+		<content>
+			<List>
+				<StandardListItem title="Master item 1" type="Navigation"></StandardListItem>
+				<StandardListItem title="Master item 2" type="Navigation"></StandardListItem>
+			</List>
+		</content>
+	</Page>
+</core:View>

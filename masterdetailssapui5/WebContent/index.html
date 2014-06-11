@@ -1,26 +1,44 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv='Content-Type' content='text/html;charset=UTF-8' />
 
-		<script src="resources/sap-ui-core.js"
-				id="sap-ui-bootstrap"
-				data-sap-ui-libs="sap.m"
-				data-sap-ui-theme="sap_bluecrystal">
-		</script>
-		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+<script src="resources/sap-ui-core.js" id="sap-ui-bootstrap"
+	data-sap-ui-libs="sap.m" data-sap-ui-theme="sap_bluecrystal">
+	
+</script>
+<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
 
-		<script>
-				sap.ui.localResources("masterdetailssapui5");
-				var app = new sap.m.App({initialPage:"idApp1"});
-				var page = sap.ui.view({id:"idApp1", viewName:"masterdetailssapui5.App", type:sap.ui.core.mvc.ViewType.XML});
-				app.addPage(page);
-				app.placeAt("content");
-		</script>
+<script>
+	sap.ui.localResources("masterdetailssapui5");
+	var app = new sap.m.App({
+		initialPage : "idApp1"
+	});
+	var mainView = sap.ui.view({
+		id : "idApp1",
+		viewName : "masterdetailssapui5.MainView",
+		type : sap.ui.core.mvc.ViewType.XML
+	});
+	var MasterViewPage = sap.ui.view({
+		id : "MasterViewPage",
+		viewName : "masterdetailssapui5.MasterView",
+		type : sap.ui.core.mvc.ViewType.XML
+	});
+	var DetailViewPage = sap.ui.view({
+		id : "DetailViewPage",
+		viewName : "masterdetailssapui5.DetailView",
+		type : sap.ui.core.mvc.ViewType.XML
+	});
 
-	</head>
-	<body class="sapUiBody" role="application">
-		<div id="content"></div>
-	</body>
+	app.addPage(mainView);
+	app.addPage(MasterViewPage);
+	app.addPage(DetailViewPage);
+	app.placeAt("content");
+</script>
+
+</head>
+<body class="sapUiBody" role="application">
+	<div id="content"></div>
+</body>
 </html>
